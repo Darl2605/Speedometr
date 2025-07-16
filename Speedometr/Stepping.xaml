@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Speedometr.Stepping"
+             Title="Stepping">
+
+    <VerticalStackLayout BackgroundColor="Black">
+        <Grid RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            
+            
+
+                <Grid Grid.Row="0" RowSpacing="15">
+                    <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                    
+                    <Label Text="Zadej svůj cíl:" VerticalOptions="Center" HorizontalOptions="Center" Padding="10"/>
+                    <Entry Grid.Column="1" x:Name="Step_goal" Keyboard="Numeric"/>
+                    <Button BackgroundColor="Aqua" TextColor="Bisque"
+                    FontSize="Header" Grid.Row="1" Grid.ColumnSpan="3" x:Name="Submit_Goal" Text="SEND" Clicked="Submit_Goal_Clicked"/>
+
+                    <Label Grid.Column="0" Grid.Row="3" x:Name="Tilt" HorizontalOptions="Center" IsVisible="Hidden"/>
+
+                    <Label Grid.Row="3" Grid.Column="0" x:Name="Remaining_Steps" HorizontalOptions="Center"/>
+
+                    <Label Grid.Row="3" Grid.Column="1" x:Name="Current_steps" HorizontalOptions="Center"/>
+
+   
+
+            
+                </Grid>
+
+            <Grid Grid.Row="1">
+                <Rectangle WidthRequest="600" BackgroundColor="Aqua" RadiusX="10" />
+            </Grid>
+                
+            <Grid Grid.Row="2" HeightRequest="400" BackgroundColor="Black">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                
+
+                <Label BackgroundColor="Aqua" Grid.Row="1"
+                        VerticalOptions="Center" Padding="15" HorizontalOptions="Center" FontSize="20" Text=" Tvůj postup :" />
+      
+
+
+                <Slider x:Name="Progressbar" Grid.Column="1" Grid.Row="1"  Rotation="270"  HeightRequest="20" ScaleY="25" ScaleX="2" 
+                        ThumbColor="Transparent" InputTransparent="False" MinimumTrackColor="Green" />
+
+
+            </Grid>
+        </Grid>
+ 
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Speedometr.MainPage">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            
+            <Button Grid.Row="0" x:Name="StartMesuring" Margin="0,0,0,0" BackgroundColor="Aqua"
+                    Text="Zjisti svoji momentální rychlost" VerticalOptions="Center" WidthRequest="350" Clicked="StartMesuring_Clicked"/>
+
+            <Label Grid.Row="1" Background="Aquamarine" TextColor="Black" x:Name="Poloha" 
+                   WidthRequest="250" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
